@@ -14,6 +14,7 @@ export class ComponenteMenu {
   private router = inject(Router);
   private auth = inject(GestionarUsuario);
   estaAutenticado = this.auth.estaAutenticado;
+  esAdmin = this.auth.esAdmin;
 
   irA(ruta: string) {
     this.router.navigate([ruta]);

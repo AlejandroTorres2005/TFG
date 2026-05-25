@@ -22,6 +22,18 @@ async function seed() {
       console.log('Usuario admin creado (Unamuno / Unamuno123*)');
     }
 
+    const hashedUser = await bcrypt.hash('alumno', 10);
+    const existingUser = await Usuario.findOne({ codigo: 'Alumno' });
+    if (existingUser) {
+      existingUser.clave = hashedUser;
+      existingUser.perfil = 'Usuario';
+      await existingUser.save();
+      console.log('Usuario alumno actualizado (Alumno / alumno)');
+    } else {
+      await Usuario.create({ codigo: 'Alumno', nombre: 'Alumno', email: 'alumno@alumno.com', clave: hashedUser, perfil: 'Usuario' });
+      console.log('Usuario alumno creado (Alumno / alumno)');
+    }
+
     console.log('Seed completado');
     process.exit(0);
   } catch (err) {

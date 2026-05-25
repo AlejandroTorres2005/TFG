@@ -12,3 +12,13 @@ export const authGuard: CanActivateFn = () => {
   router.navigate(['/login']);
   return false;
 };
+
+export const adminGuard: CanActivateFn = () => {
+  const auth = inject(GestionarUsuario);
+  const router = inject(Router);
+  if (auth.esAdmin()) {
+    return true;
+  }
+  router.navigate(['/inicio']);
+  return false;
+};

@@ -6,7 +6,7 @@ import { ComponenteCalendario } from './componentes/componente-calendario/compon
 import { ComponenteConfiguracion } from './componentes/componente-configuracion/componente-configuracion';
 import { ComponenteClases } from './componentes/componente-clases/componente-clases';
 import { ComponenteRegistro } from './componentes/registro/registro';
-import { authGuard } from './guard-auth';
+import { authGuard, adminGuard } from './guard-auth';
 
 export const routes: Routes = [
   { path: 'login', component: ComponenteLogin },
@@ -14,7 +14,7 @@ export const routes: Routes = [
   { path: 'inicio', component: ComponenteInicio, canActivate: [authGuard] },
   { path: 'profesores', component: ComponenteProfesores, canActivate: [authGuard] },
   { path: 'calendario', component: ComponenteCalendario, canActivate: [authGuard] },
-  { path: 'configuracion', component: ComponenteConfiguracion, canActivate: [authGuard] },
+  { path: 'configuracion', component: ComponenteConfiguracion, canActivate: [authGuard, adminGuard] },
   { path: 'clases', component: ComponenteClases, canActivate: [authGuard] },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: '**', redirectTo: 'login' }

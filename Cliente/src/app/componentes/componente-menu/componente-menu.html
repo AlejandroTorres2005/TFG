@@ -5,7 +5,9 @@
   <a routerLink="/profesores">Profesores</a>
   <a routerLink="/clases">Clases</a>
   <a routerLink="/calendario">Calendario</a>
+  @if(this.esAdmin()){
   <a routerLink="/configuracion">Configuración</a>
+  }
 
   @if(!this.estaAutenticado()){
   <a [matMenuTriggerFor]="menuRegistro">Registro</a>

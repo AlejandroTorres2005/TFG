@@ -12,6 +12,7 @@ import { GestionarUsuario } from '../../servicios/gestionar-usuario';
 export class ComponenteInicio {
   private auth = inject(GestionarUsuario);
   private router = inject(Router);
+  esAdmin = this.auth.esAdmin;
 
   menuItems = [
     {

@@ -6,6 +6,7 @@
 
   <section class="menu">
     @for (item of menuItems; track item.texto) {
+      @if (item.texto !== 'Configuracion' || esAdmin()) {
       @if (item.texto === 'Cerrar Sesión') {
         <a class="card" (click)="cerrarSesion($event)" href="#">
           <span class="icono">
@@ -20,6 +21,7 @@
           </span>
           <span class="texto">{{ item.texto }}</span>
         </a>
+      }
       }
     }
   </section>
