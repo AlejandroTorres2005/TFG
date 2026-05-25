@@ -1,0 +1,247 @@
+{
+  "name": "Chat Guardias Unamuno",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "chat",
+        "responseMode": "responseNode",
+        "options": {
+          "allowedOrigins": "*"
+        }
+      },
+      "id": "eca14b14-3448-4440-a0d1-a188ee8f1376",
+      "name": "Recibir mensaje",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        272,
+        592
+      ],
+      "webhookId": "chat-guardias-unamuno"
+    },
+    {
+      "parameters": {
+        "url": "http://host.docker.internal:3000/profesores?sinFoto=true",
+        "options": {}
+      },
+      "id": "dc27a5b5-a75a-490a-b83e-61697ab33c96",
+      "name": "Obtener profesores",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        480,
+        592
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const DIAS_ES = ['DOMINGO','LUNES','MARTES','MIÉRCOLES','JUEVES','VIERNES','SÁBADO'];\nconst hoy = DIAS_ES[new Date().getDay()];\n\nconst profesores = $('Obtener profesores').all().map(i => i.json);\nconst horarios = $('Obtener horarios').all().map(i => i.json);\nconst body = $('Recibir mensaje').item.json.body || $('Recibir mensaje').item.json;\nconst mensaje = body.message || '';\nconst historial = body.historial || [];\n\nconst FRANJAS = ['9:30-10:15','10:15-11:00','11:00-11:45','11:30-12:15','12:15-13:00','14:30-15:15','15:15-16:00'];\n\nconst nombreCompleto = p => `${p.nombre||''} ${p.apellidos||''}`.trim();\nconst guardiasDe = {};\nconst idDe = {};\nprofesores.forEach(p => {\n  const n = nombreCompleto(p);\n  guardiasDe[n] = p.guardiasRealizadas ?? 0;\n  idDe[n] = p._id;\n});\nconst todosProfes = profesores.map(nombreCompleto).filter(Boolean);\n\n// Buscar nombre SOLO en mensajes del usuario, nunca del asistente\nconst mensajesUsuario = [mensaje, ...historial\n  .filter(h => h.role === 'user')\n  .map(h => h.content || '')\n].join(' ').toLowerCase();\n\nconst profFalta =\n  todosProfes.find(n => mensajesUsuario.includes(n.toLowerCase())) ||\n  todosProfes.find(n => {\n    const partes = n.toLowerCase().split(' ').filter(Boolean);\n    return partes.filter(p => mensajesUsuario.includes(p)).length >= 2;\n  }) ||\n  todosProfes.find(n =>\n    n.toLowerCase().split(' ').some(p => p.length > 3 && mensajesUsuario.includes(p))\n  ) ||\n  '';\n\n// Franjas reales del profesor que falta HOY\nlet franjasDelFalta = '';\nif (profFalta) {\n  const clasesFalta = horarios.filter(h =>\n    h.dia?.toUpperCase() === hoy &&\n    h.profesor === profFalta\n  );\n  if (clasesFalta.length > 0) {\n    franjasDelFalta = `=== CLASES DE ${profFalta.toUpperCase()} HOY (${hoy}) ===\\n`;\n    clasesFalta.forEach(h => {\n      franjasDelFalta += `${h.hora} - ${h.asignatura} - Grupo ${h.grupo}\\n`;\n    });\n    franjasDelFalta += '\\n';\n  } else {\n    franjasDelFalta = `${profFalta} NO tiene clases hoy (${hoy}). No hay nada que cubrir.\\n\\n`;\n  }\n}\n\n// Distribución inteligente\nconst asignaciones = {};\nconst guardiasHoy = {};\nconst ultimaFranja = {};\n\ntodosProfes.forEach(n => { guardiasHoy[n] = 0; ultimaFranja[n] = -99; });\n\nconst franjasACubrir = profFalta\n  ? horarios\n      .filter(h => h.dia?.toUpperCase() === hoy && h.profesor === profFalta)\n      .map(h => h.hora)\n  : [];\n\nFRANJAS.forEach((franja, idx) => {\n  if (profFalta && !franjasACubrir.includes(franja)) return;\n\n  const ocupados = [...new Set(\n    horarios\n      .filter(h => h.dia?.toUpperCase() === hoy && h.hora === franja)\n      .map(h => h.profesor)\n      .filter(Boolean)\n  )];\n\n  const candidatos = todosProfes\n    .filter(n =>\n      !ocupados.includes(n) &&\n      n !== profFalta &&\n      guardiasHoy[n] < 2 &&\n      (idx - ultimaFranja[n]) > 1\n    )\n    .sort((a,b) => (guardiasDe[a]??0) - (guardiasDe[b]??0));\n\n  if (candidatos.length > 0) {\n    const elegido = candidatos[0];\n    asignaciones[franja] = elegido;\n    guardiasHoy[elegido]++;\n    ultimaFranja[elegido] = idx;\n  } else {\n    asignaciones[franja] = 'SIN CANDIDATO';\n  }\n});\n\n// Contexto para Groq\nlet disponibilidadHoy = `=== DISTRIBUCIÓN PROPUESTA PARA HOY (${hoy}) ===\\n`;\nconst franjasAsignadas = Object.keys(asignaciones);\nif (franjasAsignadas.length > 0) {\n  franjasAsignadas.forEach(franja => {\n    const prof = asignaciones[franja];\n    const g = guardiasDe[prof] ?? 0;\n    disponibilidadHoy += `${franja} → ${prof} (${g} guardias acumuladas)\\n`;\n  });\n} else {\n  disponibilidadHoy += `No hay franjas que cubrir.\\n`;\n}\n\n// SOLO los profesores realmente asignados (excluir al que falta)\nconst profesoresAsignados = [...new Set(\n  Object.values(asignaciones)\n    .filter(n => n && n !== 'SIN CANDIDATO' && n !== profFalta)\n)];\n\nconst asignacionesConId = profesoresAsignados.map(nombre => ({\n  profesor: nombre,\n  id: idDe[nombre] || null,\n  guardiasActuales: guardiasDe[nombre] ?? 0\n})).filter(a => a.id);\n\nreturn [{ json: {\n  contexto: franjasDelFalta + disponibilidadHoy,\n  mensaje,\n  historial,\n  hoy,\n  asignaciones: asignacionesConId,\n  profFalta\n}}];"
+      },
+      "id": "fca0208c-3668-43d8-b92a-7e5e1a0c7653",
+      "name": "Preparar contexto",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        880,
+        592
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.groq.com/openai/v1/chat/completions",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({\n  \"model\": \"llama-3.3-70b-versatile\",\n  \"temperature\": 0.3,\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"Eres un asistente de guardias del IES Unamuno. Hoy es \" + $json.hoy + \".\\n\\nIMPORTANTE: NUNCA inventes franjas horarias. Usa EXCLUSIVAMENTE las franjas que aparecen en 'CLASES DE [NOMBRE] HOY'. Si el profesor no tiene clases hoy, dilo claramente.\\n\\nCuando un profesor falta:\\n1. Muestra la distribución propuesta para hoy con este formato:\\n'Propuesta para cubrir a [NOMBRE QUE FALTA]:\\n- [FRANJA] → [PROFE] ([N] guardias acumuladas)\\n...\\n¿Confirmas esta distribución? Responde SÍ para guardar o dime qué cambiar.'\\n\\n2. Si el usuario confirma (dice sí, confirmo, ok, vale), responde EXACTAMENTE con:\\n'CONFIRMADO'\\n\\n3. Si el usuario pide cambios, ajusta y vuelve a mostrar la propuesta.\\n\\nReglas:\\n- Máximo 2 guardias por profesor hoy.\\n- No asignar franjas consecutivas al mismo profesor.\\n- Elige siempre al de menos guardias acumuladas.\\n- Responde en español.\\n\\nDatos de hoy:\\n\" + $json.contexto\n    },\n    ...$json.historial,\n    {\n      \"role\": \"user\",\n      \"content\": $json.mensaje\n    }\n  ]\n}) }}",
+        "options": {}
+      },
+      "id": "fa8cf5e3-026d-4a54-bf79-dd1df8e71e0e",
+      "name": "Groq responde",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1072,
+        592
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "cmdeVlWU33bXbj4E",
+          "name": "Header Auth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\"reply\": {{ JSON.stringify($json.reply) }}}",
+        "options": {}
+      },
+      "id": "ed88bce4-32df-4131-ab37-5dfdee07a58a",
+      "name": "Enviar respuesta",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        1456,
+        592
+      ]
+    },
+    {
+      "parameters": {
+        "url": "http://host.docker.internal:3000/horarios",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        688,
+        592
+      ],
+      "id": "e1c19aa2-f1ea-48af-a4cc-368ffc3e7a7c",
+      "name": "Obtener horarios"
+    },
+    {
+      "parameters": {
+        "jsCode": "const respuesta = $json.choices[0].message.content;\nconst confirmado = respuesta.trim().toUpperCase().includes('CONFIRMADO');\nconst asignaciones = $('Preparar contexto').item.json.asignaciones || [];\n\nconst updates = [];\n\nif (confirmado) {\n  const conteo = {};\n  asignaciones.forEach(a => {\n    if (!a.id) return;\n    if (!conteo[a.id]) {\n      conteo[a.id] = {\n        id: a.id,\n        guardiasActuales: a.guardiasActuales,\n      };\n    }\n  });\n\n  Object.values(conteo).forEach(({ id, guardiasActuales }) => {\n    updates.push({ id, guardiasRealizadas: guardiasActuales + 1 });\n  });\n}\n\nreturn [{ json: {\n  reply: respuesta,\n  confirmado,\n  updates\n}}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1264,
+        592
+      ],
+      "id": "0b522ad7-26cd-463a-8f70-3714f0594212",
+      "name": "¿Confirmado?"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "updates",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        1456,
+        736
+      ],
+      "id": "4ebe4a27-9bff-4b8c-b792-434eaa59f822",
+      "name": "Separar actualizaciones"
+    },
+    {
+      "parameters": {
+        "method": "PUT",
+        "url": "=http://host.docker.internal:3000/profesores/{{ $json.id }}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={ \"guardiasRealizadas\": {{ $json.guardiasRealizadas }} }",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        1664,
+        736
+      ],
+      "id": "67f3a93f-be29-4dad-bd40-8fa48a9b9b1d",
+      "name": "Actualizar guardias en BD"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Recibir mensaje": {
+      "main": [
+        [
+          {
+            "node": "Obtener profesores",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Obtener profesores": {
+      "main": [
+        [
+          {
+            "node": "Obtener horarios",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Preparar contexto": {
+      "main": [
+        [
+          {
+            "node": "Groq responde",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Groq responde": {
+      "main": [
+        [
+          {
+            "node": "¿Confirmado?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Obtener horarios": {
+      "main": [
+        [
+          {
+            "node": "Preparar contexto",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "¿Confirmado?": {
+      "main": [
+        [
+          {
+            "node": "Enviar respuesta",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Separar actualizaciones",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Separar actualizaciones": {
+      "main": [
+        [
+          {
+            "node": "Actualizar guardias en BD",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "3394f147-ac22-4c8a-8db4-56a4d06f3f98",
+  "meta": {
+    "instanceId": "33a8f9ef6ab78f8f10cf53ca1673e999d2030dffa3753550bca2b03e596df5e6"
+  },
+  "id": "XoBQdXu63pp1LoN1",
+  "tags": []
+}
