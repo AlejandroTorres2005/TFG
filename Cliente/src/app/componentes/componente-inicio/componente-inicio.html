@@ -1,0 +1,26 @@
+<div class="inicio-container">
+  <header class="header">
+    <h1>Gestión de Faltas</h1>
+    <p>Bienvenido Admin</p>
+  </header>
+
+  <section class="menu">
+    @for (item of menuItems; track item.texto) {
+      @if (item.texto === 'Cerrar Sesión') {
+        <a class="card" (click)="cerrarSesion($event)" href="#">
+          <span class="icono">
+            <img [src]="item.imagen" [alt]="item.texto">
+          </span>
+          <span class="texto">{{ item.texto }}</span>
+        </a>
+      } @else {
+        <a class="card" [routerLink]="item.ruta">
+          <span class="icono">
+            <img [src]="item.imagen" [alt]="item.texto">
+          </span>
+          <span class="texto">{{ item.texto }}</span>
+        </a>
+      }
+    }
+  </section>
+</div>

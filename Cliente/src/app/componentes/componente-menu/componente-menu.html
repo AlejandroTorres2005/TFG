@@ -1,0 +1,24 @@
+<div class="contenedor">
+  <a routerLink="/inicio">
+  <p>🏫​</p>
+  </a>
+  <a routerLink="/profesores">Profesores</a>
+  <a routerLink="/clases">Clases</a>
+  <a routerLink="/calendario">Calendario</a>
+  <a routerLink="/configuracion">Configuración</a>
+
+  @if(!this.estaAutenticado()){
+  <a [matMenuTriggerFor]="menuRegistro">Registro</a>
+  <mat-menu #menuRegistro="matMenu">
+    <button mat-menu-item routerLink="/registro">Registrarse</button>
+    <button mat-menu-item routerLink="/login">Login</button>
+  </mat-menu>
+  }
+  @if(this.estaAutenticado()){
+  <a [matMenuTriggerFor]="menuRegistro">Registro</a>
+  <mat-menu #menuRegistro="matMenu">
+    <button mat-menu-item (click)="logout()">Logout</button>
+  </mat-menu>
+  }
+
+</div>

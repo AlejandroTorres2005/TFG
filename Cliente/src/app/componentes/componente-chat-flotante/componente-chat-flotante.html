@@ -1,0 +1,47 @@
+<div class="fab" (click)="toggleChat()" [class.active]="abierto">
+  <span class="fab-icon">{{ abierto ? '✕' : '💬' }}</span>
+</div>
+
+@if (abierto) {
+  <div class="chat-overlay" (click)="toggleChat()">
+    <div class="chat-panel" (click)="$event.stopPropagation()">
+      <div class="panel-header">
+        <div class="panel-header-info">
+          <span class="panel-avatar"><img src="../../../../../Fotos/chat-avatar.svg" alt="Asistente"></span>
+          <div>
+            <div class="panel-title">Asistente de Guardias</div>
+            <div class="panel-status">● En línea</div>
+          </div>
+        </div>
+        <button class="btn-cerrar" (click)="toggleChat()">✕</button>
+      </div>
+
+      <div class="panel-mensajes" #messagesContainer>
+        @for (msg of mensajes; track msg.hora) {
+          <div class="msg" [class.msg-user]="msg.tipo === 'user'" [class.msg-bot]="msg.tipo === 'bot'">
+            <div class="bubble">{{ msg.texto }}</div>
+          </div>
+        }
+        @if (cargando) {
+          <div class="msg msg-bot">
+            <div class="bubble loading">Escribiendo<span>.</span><span>.</span><span>.</span></div>
+          </div>
+        }
+      </div>
+
+      <div class="panel-input">
+        <input
+          type="text"
+          [(ngModel)]="mensajeActual"
+          placeholder="Escribe tu consulta..."
+          (keydown.enter)="enviarMensaje()"
+          [disabled]="cargando"
+        >
+        <button
+          (click)="enviarMensaje()"
+          [disabled]="!mensajeActual.trim() || cargando"
+        >{{ cargando ? '⋯' : 'Enviar' }}</button>
+      </div>
+    </div>
+  </div>
+}

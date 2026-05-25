@@ -1,0 +1,19 @@
+# Node
+node_modules/
+npm-debug.log*
+.env
+
+# Angular dist
+Cliente/dist/
+
+# API logs
+API/access.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp

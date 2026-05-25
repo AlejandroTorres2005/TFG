@@ -1,0 +1,47 @@
+<div class="calendario-container">
+  <div class="calendar-card">
+    <full-calendar [options]="calendarOptions"></full-calendar>
+  </div>
+
+  <div class="schedule-card">
+    @if (!selectedDateStr) {
+      <div class="placeholder-icon">📅</div>
+      <h3>Calendario de clases</h3>
+      <p class="placeholder">Haz clic en un día para ver las clases</p>
+    } @else {
+      <div class="schedule-header">
+        <div class="schedule-date">
+          <span class="schedule-day">{{ selectedDateLabel.split(',')[0] }}</span>
+          <span class="schedule-full">{{ selectedDateLabel }}</span>
+        </div>
+        <span class="schedule-count">{{ clasesDelDia.length }} clase{{ clasesDelDia.length !== 1 ? 's' : '' }}</span>
+      </div>
+
+      @if (clasesDelDia.length === 0) {
+        <div class="empty-state">
+          <span class="empty-icon">📭</span>
+          <p>No hay clases este día</p>
+        </div>
+      } @else {
+        <div class="filtros">
+          <button [class.activo]="filtroAsignatura === 'todas'" (click)="filtroAsignatura = 'todas'">Todas</button>
+          <button [class.activo]="filtroAsignatura === 'EF'" (click)="filtroAsignatura = 'EF'">EF</button>
+          <button [class.activo]="filtroAsignatura === 'MÚSICA'" (click)="filtroAsignatura = 'MÚSICA'">Música</button>
+        </div>
+        <table class="tabla-clases">
+          <thead>
+            <tr><th class="th-hora">Hora</th><th class="th-profe">Profesor</th></tr>
+          </thead>
+          <tbody>
+            @for (c of clasesFiltradas; track c.hora; let i = $index) {
+              <tr [class.par]="i % 2 === 0">
+                <td class="td-hora"><span class="badge-hora">{{ c.hora }}</span></td>
+                <td class="td-profe">{{ c.profesor }}</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      }
+    }
+  </div>
+</div>

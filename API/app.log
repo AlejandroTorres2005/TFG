@@ -1,0 +1,415 @@
+2025-11-24T09:22:15.373Z [INFO] ::1 - - "GET /" PETICION ERRONEA
+2025-11-24T09:22:15.425Z [INFO] ::1 - - "GET /favicon.ico" PETICION ERRONEA
+2025-11-24T09:26:51.195Z [INFO] ::1 - - "GET /usuarios" PETICION ERRONEA
+2025-11-24T09:27:29.468Z [INFO] ::ffff:127.0.0.1 - - "GET /" PETICION ERRONEA
+2025-11-24T09:27:29.521Z [INFO] ::ffff:127.0.0.1 - - "GET /favicon.ico" PETICION ERRONEA
+2025-11-24T09:27:48.822Z [INFO] ::ffff:127.0.0.1 - - "GET /usuarios" PETICION ERRONEA
+2025-11-24T09:29:47.273Z [INFO] ::1 - - "GET /" PETICION ERRONEA
+2025-11-24T09:37:14.609Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario samuel no encontrado
+2025-11-24T09:37:14.623Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-24T09:37:17.287Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario samuel no encontrado
+2025-11-24T09:37:17.295Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-24T09:38:00.478Z [INFO] ::1 - - "POST /usuarios/registro" REGISTRO: Usuario registrado
+2025-11-24T09:38:07.209Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6924277848c8668c66c054ad 
+2025-11-24T09:38:29.682Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6924277848c8668c66c054ad 
+2025-11-24T11:39:56.712Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6924277848c8668c66c054ad 
+2025-11-24T11:56:50.081Z [INFO] ::1 - - "POST /usuarios/registro" REGISTRO: Usuario registrado
+2025-11-24T11:56:58.637Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6924480248c8668c66c054b3 
+2025-11-24T11:58:42.222Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-24T11:58:53.412Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario/clave incorrecta de 6924480248c8668c66c054b3 
+2025-11-24T11:58:53.417Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-24T11:58:54.517Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario/clave incorrecta de 6924480248c8668c66c054b3 
+2025-11-24T11:58:54.521Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-24T11:58:55.514Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario/clave incorrecta de 6924480248c8668c66c054b3 
+2025-11-24T11:58:55.520Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-24T11:58:55.716Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario/clave incorrecta de 6924480248c8668c66c054b3 
+2025-11-24T11:58:55.719Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-24T11:58:55.875Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario/clave incorrecta de 6924480248c8668c66c054b3 
+2025-11-24T11:58:55.878Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-24T11:59:17.251Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6924480248c8668c66c054b3 
+2025-11-24T12:02:22.191Z [INFO] ::1 - - "POST /futbol" PETICION ERRONEA
+2025-11-24T12:12:09.065Z [INFO] ::1 - - "GET /" PETICION ERRONEA
+2025-11-24T12:12:09.111Z [INFO] ::1 - - "GET /favicon.ico" PETICION ERRONEA
+2025-11-24T12:12:25.222Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-24T12:12:53.982Z [INFO] ::1 - - "POST /usuarios/registro" REGISTRO: Usuario registrado
+2025-11-24T12:13:03.963Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 69244bc5f8b1c49c56f1282a 
+2025-11-24T12:19:24.686Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-24T12:19:45.389Z [INFO] ::1 - - "POST /usuarios/registro" REGISTRO: Usuario registrado
+2025-11-24T12:19:52.860Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 69244d61f8b1c49c56f1282e 
+2025-11-25T09:01:02.035Z [INFO] ::1 - - "POST /usuarios/registro" REGISTRO: Usuario registrado
+2025-11-25T09:01:12.942Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6925704e96e6c5fe9c6408a7 
+2025-11-25T09:04:14.201Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-25T09:06:49.395Z [INFO] ::1 - - "POST /futbol" PETICION ERRONEA
+2025-11-25T09:07:53.942Z [INFO] ::1 - - "POST /futbol" PETICION ERRONEA
+2025-11-25T09:21:29.088Z [INFO] ::1 - - "POST /futbol" PETICION ERRONEA
+2025-11-25T09:27:10.843Z [INFO] ::1 - - "POST /futbol" PETICION ERRONEA
+2025-11-25T09:28:11.419Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario samuel no encontrado
+2025-11-25T09:28:11.427Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-25T09:28:13.156Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario samuel no encontrado
+2025-11-25T09:28:13.169Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-25T09:28:14.410Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario samuel no encontrado
+2025-11-25T09:28:14.421Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-25T09:28:14.723Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario samuel no encontrado
+2025-11-25T09:28:14.735Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-25T09:28:14.892Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario samuel no encontrado
+2025-11-25T09:28:14.903Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-25T09:28:15.025Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario samuel no encontrado
+2025-11-25T09:28:15.035Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-25T09:28:15.163Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario samuel no encontrado
+2025-11-25T09:28:15.173Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-25T09:28:15.434Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario samuel no encontrado
+2025-11-25T09:28:15.443Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-25T09:28:15.564Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario samuel no encontrado
+2025-11-25T09:28:15.574Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-25T09:28:15.672Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario samuel no encontrado
+2025-11-25T09:28:15.680Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-25T09:28:15.945Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario samuel no encontrado
+2025-11-25T09:28:15.954Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-25T09:29:03.971Z [INFO] ::1 - - "POST /usuarios/registro" REGISTRO: Usuario registrado
+2025-11-25T09:29:12.972Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 692576df54fc0910d59fbd06 
+2025-11-25T09:44:53.717Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 692576df54fc0910d59fbd06 
+2025-11-25T09:44:58.230Z [INFO] ::1 - - "GET /equipos" PETICION ERRONEA
+2025-11-25T09:45:08.227Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 692576df54fc0910d59fbd06 
+2025-11-25T09:45:10.655Z [INFO] ::1 - - "GET /equipos" PETICION ERRONEA
+2025-11-25T09:46:18.067Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 692576df54fc0910d59fbd06 
+2025-11-25T09:55:19.494Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 692576df54fc0910d59fbd06 
+2025-11-25T09:58:49.184Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 692576df54fc0910d59fbd06 
+2025-11-25T10:04:22.088Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 692576df54fc0910d59fbd06 
+2025-11-25T10:06:43.141Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 692576df54fc0910d59fbd06 
+2025-11-25T12:29:24.371Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 692576df54fc0910d59fbd06 
+2025-11-25T12:32:23.952Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 692576df54fc0910d59fbd06 
+2025-11-25T12:32:59.811Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 692576df54fc0910d59fbd06 
+2025-11-25T12:38:58.355Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 692576df54fc0910d59fbd06 
+2025-11-25T12:47:32.263Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 692576df54fc0910d59fbd06 
+2025-11-25T12:49:27.841Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 692576df54fc0910d59fbd06 
+2025-11-25T12:50:25.847Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 692576df54fc0910d59fbd06 
+2025-11-25T12:50:59.602Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 692576df54fc0910d59fbd06 
+2025-11-25T12:51:44.890Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 692576df54fc0910d59fbd06 
+2025-11-25T12:53:11.415Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 692576df54fc0910d59fbd06 
+2025-11-25T12:55:34.740Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 692576df54fc0910d59fbd06 
+2025-11-25T12:56:26.257Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 692576df54fc0910d59fbd06 
+2025-11-25T12:58:16.454Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario/clave incorrecta de 692576df54fc0910d59fbd06 
+2025-11-25T12:58:16.459Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-25T12:58:17.839Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario/clave incorrecta de 692576df54fc0910d59fbd06 
+2025-11-25T12:58:17.842Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-25T12:58:23.456Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 692576df54fc0910d59fbd06 
+2025-11-25T13:07:29.692Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario/clave incorrecta de 692576df54fc0910d59fbd06 
+2025-11-25T13:07:29.697Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-25T13:07:34.891Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 692576df54fc0910d59fbd06 
+2025-11-26T08:27:02.481Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario samus no encontrado
+2025-11-26T08:27:02.492Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-26T08:27:03.120Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario samus no encontrado
+2025-11-26T08:27:03.132Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-26T08:27:03.376Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario samus no encontrado
+2025-11-26T08:27:03.387Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-26T08:27:05.954Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario  no encontrado
+2025-11-26T08:27:05.967Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-26T08:27:13.084Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 692576df54fc0910d59fbd06 
+2025-11-26T08:46:09.658Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario samus no encontrado
+2025-11-26T08:46:09.666Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-26T08:46:10.897Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario samus no encontrado
+2025-11-26T08:46:10.905Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-26T08:46:14.641Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 692576df54fc0910d59fbd06 
+2025-11-26T08:46:21.168Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-26T08:46:30.388Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 692576df54fc0910d59fbd06 
+2025-11-26T08:46:31.161Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-26T08:46:53.898Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-26T08:47:45.040Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-26T08:47:49.740Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-26T08:48:10.843Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 692576df54fc0910d59fbd06 
+2025-11-26T08:57:29.998Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-26T08:57:46.348Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-26T09:01:38.050Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 692576df54fc0910d59fbd06 
+2025-11-26T09:10:00.688Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 692576df54fc0910d59fbd06 
+2025-11-26T09:15:14.469Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 692576df54fc0910d59fbd06 
+2025-11-26T09:19:11.934Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 692576df54fc0910d59fbd06 
+2025-11-26T09:19:45.932Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario/clave incorrecta de 692576df54fc0910d59fbd06 
+2025-11-26T09:19:45.936Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-26T09:19:47.013Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario/clave incorrecta de 692576df54fc0910d59fbd06 
+2025-11-26T09:19:47.016Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-26T09:19:47.160Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario/clave incorrecta de 692576df54fc0910d59fbd06 
+2025-11-26T09:19:47.163Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-26T09:19:51.997Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 692576df54fc0910d59fbd06 
+2025-11-26T09:21:44.824Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 692576df54fc0910d59fbd06 
+2025-11-26T09:26:19.123Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-26T09:26:27.155Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2025-11-26T11:22:46.431Z [INFO] ::ffff:127.0.0.1 - - "GET /" PETICION ERRONEA
+2025-11-26T12:31:55.485Z [INFO] ::1 - - "DELETE /futbol" PETICION ERRONEA
+2026-01-26T11:20:25.708Z [INFO] ::ffff:127.0.0.1 - - "GET /" PETICION ERRONEA
+2026-01-26T11:20:25.747Z [INFO] ::ffff:127.0.0.1 - - "GET /favicon.ico" PETICION ERRONEA
+2026-01-26T11:50:08.961Z [INFO] ::ffff:127.0.0.1 - - "GET /" PETICION ERRONEA
+2026-01-26T11:52:06.206Z [INFO] ::ffff:127.0.0.1 - - "GET /" PETICION ERRONEA
+2026-01-26T11:52:40.045Z [INFO] ::ffff:127.0.0.1 - - "GET /" PETICION ERRONEA
+2026-01-26T12:39:14.173Z [INFO] ::ffff:127.0.0.1 - - "GET /" PETICION ERRONEA
+2026-01-26T12:41:53.076Z [INFO] ::1 - - "POST /" PETICION ERRONEA
+2026-01-26T12:42:35.003Z [INFO] ::1 - - "POST /post" PETICION ERRONEA
+2026-01-26T12:46:04.739Z [INFO] ::1 - - "POST /profesores" PETICION ERRONEA
+2026-02-03T08:46:07.947Z [INFO] ::ffff:127.0.0.1 - - "GET /" PETICION ERRONEA
+2026-02-03T08:46:20.789Z [INFO] ::ffff:127.0.0.1 - - "GET /favicon.ico" PETICION ERRONEA
+2026-03-11T09:18:54.972Z [INFO] ::1 - - "POST /unamuno/aulas" PETICION ERRONEA
+2026-03-11T09:19:25.590Z [INFO] ::1 - - "POST /unamuno/aulas" PETICION ERRONEA
+2026-04-27T09:11:59.496Z [INFO] ::ffff:127.0.0.1 - - "GET /" PETICION ERRONEA
+2026-04-27T09:11:59.606Z [INFO] ::ffff:127.0.0.1 - - "GET /favicon.ico" PETICION ERRONEA
+2026-04-27T09:26:19.824Z [INFO] ::ffff:127.0.0.1 - - "GET /" PETICION ERRONEA
+2026-05-22T21:56:34.120Z [INFO] ::1 - - "GET /futbol" PETICION ERRONEA
+2026-05-22T21:56:35.947Z [INFO] ::1 - - "GET /futbol" PETICION ERRONEA
+2026-05-22T21:56:39.812Z [INFO] ::1 - - "GET /futbol" PETICION ERRONEA
+2026-05-22T21:59:36.213Z [INFO] ::1 - - "GET /futbol" PETICION ERRONEA
+2026-05-22T21:59:40.110Z [INFO] ::1 - - "GET /futbol" PETICION ERRONEA
+2026-05-22T21:59:41.950Z [INFO] ::1 - - "GET /futbol" PETICION ERRONEA
+2026-05-22T22:31:13.758Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d9145ffb391f870f8fc3 
+2026-05-22T22:31:14.122Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d9145ffb391f870f8fc3 
+2026-05-22T22:31:14.351Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d9145ffb391f870f8fc3 
+2026-05-22T22:31:14.491Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d9145ffb391f870f8fc3 
+2026-05-22T22:31:19.490Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario/clave incorrecta de 6a10d9145ffb391f870f8fc3 
+2026-05-22T22:31:19.494Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2026-05-22T22:31:31.725Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario/clave incorrecta de 6a10d9145ffb391f870f8fc3 
+2026-05-22T22:31:31.729Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2026-05-22T22:31:32.105Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario/clave incorrecta de 6a10d9145ffb391f870f8fc3 
+2026-05-22T22:31:32.108Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2026-05-22T22:31:32.267Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario/clave incorrecta de 6a10d9145ffb391f870f8fc3 
+2026-05-22T22:31:32.270Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2026-05-22T22:31:32.424Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario/clave incorrecta de 6a10d9145ffb391f870f8fc3 
+2026-05-22T22:31:32.427Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2026-05-22T22:31:47.323Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario/clave incorrecta de 6a10d9145ffb391f870f8fc3 
+2026-05-22T22:31:47.327Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2026-05-22T22:33:11.524Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:33:11.920Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:33:12.071Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:33:12.209Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:33:12.817Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:33:13.183Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:33:13.320Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:34:20.727Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:34:21.052Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:34:21.213Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:37:31.525Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:37:31.902Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:37:32.048Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:37:32.251Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:37:32.423Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:37:32.589Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:37:32.798Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:37:32.989Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:37:33.193Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:37:33.367Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:37:33.508Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:37:33.669Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:37:38.305Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:37:38.451Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:39:32.023Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:39:32.348Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:39:32.508Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:39:32.651Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:39:32.816Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:40:50.428Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:40:50.819Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:40:50.969Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:40:51.112Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:40:51.256Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:40:51.413Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:41:12.123Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:41:12.434Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:41:12.563Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:41:12.712Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:41:12.860Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:41:13.004Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:46:16.266Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:46:26.165Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:46:26.627Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:46:26.829Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:46:26.982Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:46:27.148Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:46:57.707Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:46:58.123Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:46:58.285Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:47:01.781Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:47:02.091Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:47:02.483Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:47:02.778Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:47:03.015Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:47:03.187Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:47:03.338Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:47:03.505Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:47:03.655Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:48:59.815Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:49:00.201Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:49:00.365Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:49:00.513Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:49:00.655Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:56:06.271Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:56:06.804Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:56:06.965Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:56:07.108Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:56:07.279Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:56:07.511Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:56:07.685Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:56:08.118Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:56:35.723Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:56:35.915Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:56:36.081Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:56:36.232Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:56:36.372Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:56:36.515Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:56:36.664Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:56:36.837Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:56:37.001Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:56:37.622Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:59:35.755Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:59:36.113Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:59:36.260Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:59:36.401Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T22:59:36.564Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T23:00:01.817Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T23:00:02.052Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T23:00:02.189Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T23:00:02.325Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T23:00:02.490Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T23:02:39.292Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario test no encontrado
+2026-05-22T23:06:19.216Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T23:06:19.630Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T23:06:19.799Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T23:06:19.946Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T23:06:20.094Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T23:06:20.265Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T23:06:20.420Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10d96ef5671284f135b7e1 
+2026-05-22T23:07:16.431Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-22T23:07:16.816Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-22T23:07:16.984Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-22T23:07:17.130Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-22T23:07:17.300Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-22T23:07:17.472Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-22T23:07:17.634Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-22T23:07:17.802Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-22T23:07:30.816Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-22T23:07:31.085Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-22T23:07:31.245Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-22T23:07:31.395Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-22T23:08:49.527Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-22T23:09:23.439Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-22T23:09:23.537Z [INFO] ::1 - - "GET /usuarios/perfil" PERFIL: petición realizada 
+2026-05-22T23:25:30.580Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-22T23:26:10.172Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-22T23:26:33.322Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-22T23:28:43.854Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-22T23:28:51.412Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2026-05-22T23:29:00.087Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-22T23:34:27.100Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-22T23:36:37.601Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-22T23:38:49.564Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-22T23:40:12.591Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-22T23:43:04.184Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-22T23:45:27.396Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-22T23:48:57.367Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-22T23:51:07.532Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario/clave incorrecta de 6a10e193c9f2cd5e419d9057 
+2026-05-22T23:51:07.537Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2026-05-22T23:51:10.549Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-22T23:55:37.157Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-22T23:58:42.725Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-22T23:58:48.801Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2026-05-22T23:58:53.436Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T00:16:27.296Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T00:24:31.125Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T06:11:39.535Z [INFO] ::1 - - "GET /clases" PETICION ERRONEA
+2026-05-23T06:15:02.156Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T06:15:08.951Z [INFO] ::1 - - "GET /clases" PETICION ERRONEA
+2026-05-23T06:22:21.783Z [INFO] ::1 - - "GET /clases" PETICION ERRONEA
+2026-05-23T06:53:10.688Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T06:53:27.024Z [INFO] ::1 - - "GET /clases" PETICION ERRONEA
+2026-05-23T06:56:07.894Z [INFO] ::1 - - "GET /clases" PETICION ERRONEA
+2026-05-23T07:05:59.038Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario/clave incorrecta de 6a10e193c9f2cd5e419d9057 
+2026-05-23T07:05:59.047Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2026-05-23T07:06:06.387Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T07:13:45.326Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario/clave incorrecta de 6a10e193c9f2cd5e419d9057 
+2026-05-23T07:13:45.330Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2026-05-23T07:13:52.161Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T07:15:57.492Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T07:27:28.337Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario/clave incorrecta de 6a10e193c9f2cd5e419d9057 
+2026-05-23T07:27:28.343Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2026-05-23T07:27:35.805Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T07:31:19.748Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T09:14:28.988Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T09:19:46.044Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario/clave incorrecta de 6a10e193c9f2cd5e419d9057 
+2026-05-23T09:19:46.051Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2026-05-23T09:19:50.206Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T09:20:43.543Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T09:38:48.728Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T09:43:34.909Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T09:46:36.417Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T12:00:21.538Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T12:00:55.589Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T12:07:21.065Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T12:07:43.780Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T12:14:17.666Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T15:40:25.927Z [INFO] ::1 - - "POST /horarios/seed" PETICION ERRONEA
+2026-05-23T15:56:46.269Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T16:08:40.136Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T16:16:58.639Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T16:21:25.203Z [INFO] ::1 - - "GET /" PETICION ERRONEA
+2026-05-23T16:21:25.229Z [INFO] ::1 - - "GET /favicon.ico" PETICION ERRONEA
+2026-05-23T16:21:43.298Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T16:26:53.173Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T16:30:21.793Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T16:37:02.474Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T16:41:04.256Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T16:46:19.847Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T16:50:00.956Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario/clave incorrecta de 6a10e193c9f2cd5e419d9057 
+2026-05-23T16:50:00.962Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2026-05-23T16:50:03.565Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T16:51:27.543Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2026-05-23T16:51:35.971Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T17:56:01.115Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T18:05:02.261Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T18:10:27.595Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T18:14:26.890Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T18:30:14.799Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T18:43:26.291Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T21:44:09.413Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T23:17:41.654Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T23:25:05.881Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T23:31:00.797Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario/clave incorrecta de 6a10e193c9f2cd5e419d9057 
+2026-05-23T23:31:00.803Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2026-05-23T23:31:04.816Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T23:47:52.856Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-23T23:49:00.563Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-24T15:09:18.820Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-24T15:11:23.749Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-24T15:17:28.435Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-24T15:23:15.880Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-24T15:26:48.533Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-24T15:27:52.401Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-25T15:29:00.485Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-25T16:05:35.718Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-25T16:17:22.290Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-25T16:18:18.811Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-25T16:20:50.960Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-25T14:41:04.387Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: usuario/clave incorrecta de 6a10e193c9f2cd5e419d9057 
+2026-05-25T14:41:04.395Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2026-05-25T14:41:08.311Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-25T14:44:21.514Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-25T14:46:13.530Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2026-05-25T14:46:32.057Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-25T15:18:36.478Z [INFO] ::1 - - "GET /" PETICION ERRONEA
+2026-05-25T15:18:36.499Z [INFO] ::1 - - "GET /favicon.ico" PETICION ERRONEA
+2026-05-25T15:18:46.129Z [INFO] ::1 - - "GET /profesor" PETICION ERRONEA
+2026-05-25T15:21:00.519Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-25T15:32:19.252Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2026-05-25T15:32:30.772Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-25T16:35:30.214Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-25T17:08:07.092Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-25T17:21:22.419Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-25T17:22:50.717Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2026-05-25T17:25:44.568Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-25T17:38:30.256Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-25T17:44:18.389Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-25T17:47:54.760Z [INFO] ::1 - - "POST /usuarios/logout" LOGOUT: cierre de sesión 
+2026-05-25T17:48:07.473Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-25T18:20:32.520Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-25T18:23:13.363Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-25T18:32:31.824Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-25T18:33:07.250Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-25T18:41:35.515Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-25T18:42:46.309Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-25T18:44:02.849Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-25T18:48:23.162Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 
+2026-05-25T18:49:10.253Z [INFO] ::1 - - "POST /usuarios/login" LOGIN: login correcto de 6a10e193c9f2cd5e419d9057 

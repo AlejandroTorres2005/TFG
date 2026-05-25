@@ -1,0 +1,236 @@
+<div class="container">
+  <h1>Gestión Académica</h1>
+
+  <div class="tabs">
+    <button [class.activo]="seccionActiva === 'profesores'" (click)="seccionActiva = 'profesores'; formClase = false; formHorario = false">Profesores</button>
+    <button [class.activo]="seccionActiva === 'clases'" (click)="seccionActiva = 'clases'; formProfesor = false; formHorario = false">Clases</button>
+    <button [class.activo]="seccionActiva === 'horarios'" (click)="seccionActiva = 'horarios'; formProfesor = false; formClase = false">Horarios</button>
+  </div>
+
+  <!-- SECCION PROFESORES -->
+  <div *ngIf="seccionActiva === 'profesores'" class="seccion">
+    <div class="seccion-header">
+      <h2>Profesores</h2>
+      <button (click)="mostrarFormularioProfesor()">✚ Añadir Profesor</button>
+    </div>
+
+    <div *ngIf="formProfesor" class="formulario">
+      <h3>{{ editandoProfesor ? 'Editar Profesor' : 'Nuevo Profesor' }}</h3>
+
+      <div class="campo">
+        <label>Nombre</label>
+        <input type="text" placeholder="Nombre" [(ngModel)]="nuevoProfesor.nombre" [class.error]="erroresProfesor['nombre']" />
+        <span class="msg-error" *ngIf="erroresProfesor['nombre']">{{ erroresProfesor['nombre'] }}</span>
+      </div>
+      <div class="campo">
+        <label>Apellidos</label>
+        <input type="text" placeholder="Apellidos" [(ngModel)]="nuevoProfesor.apellidos" [class.error]="erroresProfesor['apellidos']" />
+        <span class="msg-error" *ngIf="erroresProfesor['apellidos']">{{ erroresProfesor['apellidos'] }}</span>
+      </div>
+      <div class="campo">
+        <label>Email</label>
+        <input type="email" placeholder="Email (opcional)" [(ngModel)]="nuevoProfesor.email" [class.error]="erroresProfesor['email']" />
+        <span class="msg-error" *ngIf="erroresProfesor['email']">{{ erroresProfesor['email'] }}</span>
+      </div>
+      <div class="campo">
+        <label>Teléfono</label>
+        <input type="number" placeholder="Teléfono (opcional)" [(ngModel)]="nuevoProfesor.telefono" />
+      </div>
+      <div class="campo">
+        <label>Clases</label>
+        <input type="text" placeholder="Clases separadas por comas" [value]="nuevoProfesor.clases?.join(', ') || ''" (input)="onClasesInput($event)" [class.error]="erroresProfesor['clases']" />
+        <span class="msg-error" *ngIf="erroresProfesor['clases']">{{ erroresProfesor['clases'] }}</span>
+      </div>
+      <div class="campo">
+        <label>Guardias realizadas</label>
+        <input type="number" placeholder="0" [(ngModel)]="nuevoProfesor.guardiasRealizadas" />
+      </div>
+      <div class="campo">
+        <label>Foto</label>
+        <input type="file" accept="image/*" (change)="onFotoSeleccionada($event)" />
+        <div *ngIf="fotoPreview" class="foto-preview">
+          <img [src]="fotoPreview" alt="Vista previa" />
+          <button type="button" class="btn-quitar" (click)="quitarFoto()">Quitar foto</button>
+        </div>
+      </div>
+      <button (click)="guardarProfesor()" class="btn-guardar">{{ editandoProfesor ? 'Actualizar' : 'Guardar' }}</button>
+    </div>
+
+    <div class="search-bar">
+      <span class="search-icon">🔍</span>
+      <input type="text" [(ngModel)]="busquedaProfesores" placeholder="Buscar profesor..." />
+    </div>
+    <div class="lista" *ngIf="profesores.length > 0">
+      <div *ngFor="let profesor of profesoresFiltrados; let i = index" class="card">
+        <div class="card-info">
+          <strong>{{ profesor.nombre }} {{ profesor.apellidos }}</strong>
+          <p>Clases: {{ profesor.clases?.join(', ') || '—' }}{{ profesor.email ? ' | ' + profesor.email : '' }}</p>
+        </div>
+        <div class="acciones">
+          <button (click)="editarProfesor(profesor)">Editar</button>
+          <button class="eliminar" (click)="confirmarEliminarProfesor(profesor._id)">Eliminar</button>
+        </div>
+      </div>
+    </div>
+    <p class="vacio" *ngIf="profesores.length === 0">No hay profesores todavía.</p>
+  </div>
+
+  <!-- SECCION CLASES -->
+  <div *ngIf="seccionActiva === 'clases'" class="seccion">
+    <div class="seccion-header">
+      <h2>Clases</h2>
+      <button (click)="mostrarFormularioClase()">✚ Añadir Clase</button>
+    </div>
+
+    <div *ngIf="formClase" class="formulario">
+      <h3>{{ editandoClase ? 'Editar Clase' : 'Nueva Clase' }}</h3>
+      <div class="campo">
+        <label>Nombre de la clase</label>
+        <input type="text" placeholder="Nombre" [(ngModel)]="nuevaClase.nombre" [class.error]="erroresClase['nombre']" />
+        <span class="msg-error" *ngIf="erroresClase['nombre']">{{ erroresClase['nombre'] }}</span>
+      </div>
+      <div class="campo">
+        <label>Profesor</label>
+        <select [(ngModel)]="nuevaClase.profesor" [class.error]="erroresClase['profesor']">
+          <option value="">Seleccionar profesor</option>
+          <option *ngFor="let p of profesores" [value]="p.nombre + ' ' + p.apellidos">{{ p.nombre }} {{ p.apellidos }}</option>
+        </select>
+        <span class="msg-error" *ngIf="erroresClase['profesor']">{{ erroresClase['profesor'] }}</span>
+      </div>
+
+      <div class="campo">
+        <label>Horario</label>
+        <input type="text" placeholder="Horario" [(ngModel)]="nuevaClase.horario" [class.error]="erroresClase['horario']" />
+        <span class="msg-error" *ngIf="erroresClase['horario']">{{ erroresClase['horario'] }}</span>
+      </div>
+      <button (click)="guardarClase()" class="btn-guardar">{{ editandoClase ? 'Actualizar' : 'Guardar' }}</button>
+    </div>
+
+    <div class="lista" *ngIf="clases.length > 0">
+      <div *ngFor="let clase of clases; let i = index" class="card">
+        <div class="card-info">
+          <strong>{{ clase.nombre }}</strong>
+          <p>{{ clase.profesor }}{{ clase.horario ? ' | ' + clase.horario : '' }}</p>
+        </div>
+        <div class="acciones">
+          <button (click)="editarClase(clase)">Editar</button>
+          <button class="eliminar" (click)="confirmarEliminarClase(i)">Eliminar</button>
+        </div>
+      </div>
+    </div>
+    <p class="vacio" *ngIf="clases.length === 0">No hay clases todavía.</p>
+  </div>
+
+  <!-- SECCION HORARIOS -->
+  <div *ngIf="seccionActiva === 'horarios'" class="seccion seccion-horario">
+    <div class="seccion-header">
+      <h2>Horarios</h2>
+      <button (click)="mostrarFormularioHorario()">✚ Añadir Horario</button>
+    </div>
+
+    <div *ngIf="formHorario" class="formulario">
+      <h3>{{ editandoHorario ? 'Editar Horario' : 'Nuevo Horario' }}</h3>
+      <div class="campo">
+        <label>Día</label>
+        <select [(ngModel)]="nuevoHorario.dia" [class.error]="erroresHorario['dia']">
+          <option *ngFor="let d of dias" [value]="d">{{ d }}</option>
+        </select>
+        <span class="msg-error" *ngIf="erroresHorario['dia']">{{ erroresHorario['dia'] }}</span>
+      </div>
+      <div class="campo">
+        <label>Hora</label>
+        <select [(ngModel)]="nuevoHorario.hora" [class.error]="erroresHorario['hora']">
+          <option *ngFor="let h of horas" [value]="h">{{ h }}</option>
+        </select>
+        <span class="msg-error" *ngIf="erroresHorario['hora']">{{ erroresHorario['hora'] }}</span>
+      </div>
+      <div class="campo">
+        <label>Asignatura</label>
+        <select [(ngModel)]="nuevoHorario.asignatura" [class.error]="erroresHorario['asignatura']">
+          <option value="EF">Educación Física</option>
+          <option value="MÚSICA">Música</option>
+        </select>
+        <span class="msg-error" *ngIf="erroresHorario['asignatura']">{{ erroresHorario['asignatura'] }}</span>
+      </div>
+      <div class="campo">
+        <label>Grupo</label>
+        <input type="number" placeholder="Grupo" [(ngModel)]="nuevoHorario.grupo" [class.error]="erroresHorario['grupo']" />
+        <span class="msg-error" *ngIf="erroresHorario['grupo']">{{ erroresHorario['grupo'] }}</span>
+      </div>
+      <div class="campo">
+        <label>Profesor</label>
+        <select [(ngModel)]="nuevoHorario.profesor">
+          <option value="">Seleccionar profesor</option>
+          <option *ngFor="let p of profesores" [value]="p.nombre + ' ' + p.apellidos">{{ p.nombre }} {{ p.apellidos }}</option>
+        </select>
+      </div>
+      <button (click)="guardarHorario()" class="btn-guardar">{{ editandoHorario ? 'Actualizar' : 'Guardar' }}</button>
+    </div>
+
+    <h3 class="seccion-titulo rojo">Educación Física</h3>
+    <table class="tabla-horario">
+      <thead>
+        <tr>
+          <th></th>
+          <th *ngFor="let d of dias">{{ d }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let hora of horasEF">
+          <td class="hora">{{ hora }}</td>
+          <td *ngFor="let d of dias">
+            <div *ngFor="let h of getCelda('EF', d, hora)" class="celda-horario">
+              <span class="profe">{{ h.profesor }}</span>
+              <span class="acciones-horario">
+                <button class="btn-icono" (click)="editarHorario(h)" title="Editar">✎</button>
+                <button class="btn-icono eliminar" (click)="confirmarEliminarHorario(h)" title="Eliminar">✕</button>
+              </span>
+            </div>
+            <span class="vacio" *ngIf="getCelda('EF', d, hora).length === 0">—</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="seccion-titulo azul">Música</h3>
+    <table class="tabla-horario">
+      <thead>
+        <tr>
+          <th></th>
+          <th *ngFor="let d of dias">{{ d }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let hora of horasMusica">
+          <td class="hora">{{ hora }}</td>
+          <td *ngFor="let d of dias">
+            <div *ngFor="let h of getCelda('MÚSICA', d, hora)" class="celda-horario">
+              <span class="profe">{{ h.profesor }}</span>
+              <span class="acciones-horario">
+                <button class="btn-icono" (click)="editarHorario(h)" title="Editar">✎</button>
+                <button class="btn-icono eliminar" (click)="confirmarEliminarHorario(h)" title="Eliminar">✕</button>
+              </span>
+            </div>
+            <span class="vacio" *ngIf="getCelda('MÚSICA', d, hora).length === 0">—</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" [class.visible]="toastVisible" [class.error]="toastTipo === 'error'" [class.info]="toastTipo === 'info'">
+    {{ toastMensaje }}
+  </div>
+
+  <!-- CONFIRMACION -->
+  <div class="modal-overlay" *ngIf="confirmVisible" (click)="cancelarConfirmacion()">
+    <div class="modal-confirm" (click)="$event.stopPropagation()">
+      <p>{{ confirmMensaje }}</p>
+      <div class="modal-acciones">
+        <button class="btn-cancelar" (click)="cancelarConfirmacion()">Cancelar</button>
+        <button class="btn-confirmar" (click)="ejecutarConfirmacion()">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,84 @@
+<div class="search-bar">
+  <span class="search-icon">🔍</span>
+  <input type="text" [(ngModel)]="busqueda" placeholder="Buscar profesor..." />
+</div>
+<div class="cards-container">
+  <div *ngFor="let profesor of profesoresFiltrados" class="profesor-card">
+    <div class="card-imagen" (click)="verProfesor(profesor)">
+      <img [src]="profesor.foto || 'assets/default-user.png'" alt="Foto de {{ profesor.nombre }}" />
+    </div>
+    <div class="card-info">
+      <h3>{{ profesor.nombre }} {{ profesor.apellidos }}</h3>
+      <p class="guardias">Guardias realizadas: <strong>{{ profesor.guardiasRealizadas }}</strong></p>
+      <p class="resumen">Clases: {{ profesor.clases?.join(', ') || '—' }}{{ profesor.email ? ' | ' + profesor.email : '' }}</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal" *ngIf="mostrarModal" (click)="cerrarVentana()">
+  <div class="modal-contenido" (click)="$event.stopPropagation()">
+    <img id="imagenProfesor" [src]="profesorSeleccionado?.foto || 'assets/default-user.png'" alt="Foto" />
+    <h2>{{ profesorSeleccionado?.nombre }} {{ profesorSeleccionado?.apellidos }}</h2>
+    <p><strong>Email:</strong> {{ profesorSeleccionado?.email || '—' }}</p>
+    <p><strong>Teléfono:</strong> {{ profesorSeleccionado?.telefono || '—' }}</p>
+    <p><strong>Clases:</strong> {{ profesorSeleccionado?.clases?.join(', ') || '—' }}</p>
+    <p><strong>Guardias realizadas:</strong> {{ profesorSeleccionado?.guardiasRealizadas }}</p>
+    <button (click)="cerrarVentana()">Cerrar</button>
+  </div>
+</div>
+
+<!-- FORMULARIO EDITAR -->
+<div class="modal" *ngIf="mostrarFormEditar" (click)="cerrarFormEditar()">
+  <div class="modal-contenido editar-modal" (click)="$event.stopPropagation()">
+    <h2>Editar Profesor</h2>
+    <div class="campo">
+      <label>Nombre</label>
+      <input type="text" [(ngModel)]="editandoProfesor!.nombre" />
+    </div>
+    <div class="campo">
+      <label>Apellidos</label>
+      <input type="text" [(ngModel)]="editandoProfesor!.apellidos" />
+    </div>
+    <div class="campo">
+      <label>Email</label>
+      <input type="email" [(ngModel)]="editandoProfesor!.email" />
+    </div>
+    <div class="campo">
+      <label>Teléfono</label>
+      <input type="number" [(ngModel)]="editandoProfesor!.telefono" />
+    </div>
+    <div class="campo">
+      <label>Clases</label>
+      <input type="text" [value]="editandoProfesor!.clases?.join(', ') || ''" (input)="onClasesEditInput($event)" placeholder="Separadas por comas" />
+    </div>
+    <div class="campo">
+      <label>Guardias realizadas</label>
+      <input type="number" [(ngModel)]="editandoProfesor!.guardiasRealizadas" />
+    </div>
+    <div class="campo">
+      <label>Foto</label>
+      <input type="file" accept="image/*" (change)="onFotoEdit($event)" />
+      <div *ngIf="fotoPreviewEdit" class="foto-preview">
+        <img [src]="fotoPreviewEdit" alt="Vista previa" />
+      </div>
+    </div>
+    <div class="modal-acciones">
+      <button class="btn-cancelar" (click)="cerrarFormEditar()">Cancelar</button>
+      <button class="btn-guardar" (click)="guardarEdicion()">Guardar cambios</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" [class.visible]="toastVisible" [class.error]="toastTipo === 'error'">{{ toastMensaje }}</div>
+
+<!-- CONFIRMACION -->
+<div class="modal-overlay" *ngIf="confirmVisible" (click)="cancelarConfirmacion()">
+  <div class="modal-confirm" (click)="$event.stopPropagation()">
+    <p>{{ confirmMensaje }}</p>
+    <div class="modal-acciones">
+      <button class="btn-cancelar" (click)="cancelarConfirmacion()">Cancelar</button>
+      <button class="btn-confirmar" (click)="ejecutarConfirmacion()">Eliminar</button>
+    </div>
+  </div>
+</div>
